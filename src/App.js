@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Table, Row,Col,Container} from "reactstrap";
+import { Table, Row, Col, Container} from "reactstrap";
 import "./App.css";
 
 class App extends Component {
@@ -18,6 +18,7 @@ class App extends Component {
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
         console.log(response.data);
+        console.log(response);
         this.setState({
           users: response.data,
           loading: false,
@@ -25,7 +26,7 @@ class App extends Component {
       })
       .catch((error) => {
         this.setState({
-          loading: false,
+          loading: true,
           error: error.message,
         });
       });
