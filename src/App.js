@@ -53,7 +53,7 @@ class App extends Component {
           <Row>
             <Col>
             <h1>Kullanıcı Listesi</h1>
-              <Table>
+              <Table striped>
                 <thead>
                   <tr>
                     <th>#</th>
